@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>狗｜Dog</title>
+  <meta name="description" content="关于狗的单页网站：品种、照护、常见问题与趣闻" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">🐶 Dog</div>
+      <nav class="nav">
+        <a href="#about">关于</a>
+        <a href="#breeds">品种</a>
+        <a href="#care">照护</a>
+        <a href="#faq">常见问题</a>
+      </nav>
+      <button id="themeToggle" aria-label="切换主题" class="theme-btn" title="切换主题">🌙</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1>关于狗的一切</h1>
+        <p>忠诚、聪明、可爱。无论是陪伴、运动，还是疗愈，狗狗都是人类最好的伙伴。</p>
+        <div class="actions">
+          <button id="factBtn" class="btn-primary">随机狗狗趣闻</button>
+          <span id="factText" class="fact-text" aria-live="polite"></span>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section container">
+      <h2>关于</h2>
+      <p>狗（Canis lupus familiaris）起源自灰狼，历经上万年与人类共同进化，已形成数百种品种。它们善于与人类协作，擅长搜救、导盲、陪伴与心理疏导等工作。</p>
+    </section>
+
+    <section id="breeds" class="section container">
+      <h2>常见品种</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>拉布拉多</h3>
+          <p>性格温顺、热情，常见于导盲与家庭陪伴。</p>
+        </article>
+        <article class="card">
+          <h3>哈士奇</h3>
+          <p>精力旺盛、喜欢运动，需要足够的体能消耗。</p>
+        </article>
+        <article class="card">
+          <h3>边境牧羊犬</h3>
+          <p>被誉为犬界学霸，需要智力游戏与训练。</p>
+        </article>
+        <article class="card">
+          <h3>柴犬</h3>
+          <p>独立、干净，适合城市生活，但有一定执拗。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="care" class="section container">
+      <h2>照护建议</h2>
+      <ul class="tips">
+        <li>每日规律遛弯与互动，满足社交与运动需求。</li>
+        <li>科学喂养与定期体检，关注口腔与关节健康。</li>
+        <li>进行正向训练，建立规则与安全边界。</li>
+        <li>准备丰富化玩具，缓解分离焦虑与无聊。</li>
+      </ul>
+      <div class="tool">
+        <label for="sizeSelect">按体型筛选推荐：</label>
+        <select id="sizeSelect">
+          <option value="all">全部</option>
+          <option value="small">小型</option>
+          <option value="medium">中型</option>
+          <option value="large">大型</option>
+        </select>
+      </div>
+      <div id="recommendList" class="rec-list" aria-live="polite"></div>
+    </section>
+
+    <section id="faq" class="section container">
+      <h2>常见问题</h2>
+      <details>
+        <summary>新手适合养哪种狗？</summary>
+        <p>温顺、易训练、掉毛量适中的品种更友好，例如拉布拉多、比熊等。具体还需结合居住环境与时间精力。</p>
+      </details>
+      <details>
+        <summary>多久洗一次澡？</summary>
+        <p>一般 3–4 周一次，视品种、皮肤状态与活动强度而定；记得配合日常梳毛。</p>
+      </details>
+      <details>
+        <summary>是否推荐领养？</summary>
+        <p>领养代替购买是很好的选择，请确保有长期照护的责任与准备，并到正规机构办理。</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Dog • 构建于 HTML/CSS/JS</small>
+      <small><a href="https://github.com/Cjq1233/dog" rel="noopener noreferrer">GitHub 仓库</a></small>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
